@@ -95,6 +95,8 @@ app.model({
 
     showFieldOfficeNumbers: false,
 
+    locale: "en-US",
+
     debug: debug,
   },
 
