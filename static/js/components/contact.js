@@ -4,11 +4,8 @@ const find = require('lodash/find');
 module.exports = (c, state, prev, send) => {
   const photoURL = c.photoURL == "" ? "/img/5calls-icon-office.png" : c.photoURL;
   const reason = c.reason == "" ? "This organization is driving legislation related to the issue." : c.reason;
+  const repID = c.party ? c.party.substring(0,1) + "-" + c.state : '';
 
-  repID = ""
-  if (c.party != "") {
-    repID = c.party.substring(0,1) + "-" + c.state;
-  }
 
   let fieldOffices
   if (!!~c.field_offices) {
